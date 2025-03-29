@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\arunm\\source\\repos\\TutorialsNinjaSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A293F03-99A5-4798-BE65-E27472E4C1FF}|TutorialsNinjaProject\\TutorialsNinjaProject.csproj|c:\\users\\arunm\\source\\repos\\tutorialsninjasolution\\tutorialsninjaproject\\tests\\searchtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A293F03-99A5-4798-BE65-E27472E4C1FF}|TutorialsNinjaProject\\TutorialsNinjaProject.csproj|solutionrelative:tutorialsninjaproject\\tests\\searchtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A293F03-99A5-4798-BE65-E27472E4C1FF}|TutorialsNinjaProject\\TutorialsNinjaProject.csproj|c:\\users\\arunm\\source\\repos\\tutorialsninjasolution\\tutorialsninjaproject\\tests\\logintests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A293F03-99A5-4798-BE65-E27472E4C1FF}|TutorialsNinjaProject\\TutorialsNinjaProject.csproj|solutionrelative:tutorialsninjaproject\\tests\\logintests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A293F03-99A5-4798-BE65-E27472E4C1FF}|TutorialsNinjaProject\\TutorialsNinjaProject.csproj|c:\\users\\arunm\\source\\repos\\tutorialsninjasolution\\tutorialsninjaproject\\pages\\accountpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A293F03-99A5-4798-BE65-E27472E4C1FF}|TutorialsNinjaProject\\TutorialsNinjaProject.csproj|solutionrelative:tutorialsninjaproject\\pages\\accountpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SearchTests.cs",
-              "DocumentMoniker": "C:\\Users\\arunm\\source\\repos\\TutorialsNinjaSolution\\TutorialsNinjaProject\\Tests\\SearchTests.cs",
-              "RelativeDocumentMoniker": "TutorialsNinjaProject\\Tests\\SearchTests.cs",
-              "ToolTip": "C:\\Users\\arunm\\source\\repos\\TutorialsNinjaSolution\\TutorialsNinjaProject\\Tests\\SearchTests.cs*",
-              "RelativeToolTip": "TutorialsNinjaProject\\Tests\\SearchTests.cs*",
-              "ViewState": "AgIAABQAAAAAAAAAAAAswCgAAABdAAAAAAAAAA==",
+              "Title": "AccountPage.cs",
+              "DocumentMoniker": "C:\\Users\\arunm\\source\\repos\\TutorialsNinjaSolution\\TutorialsNinjaProject\\Pages\\AccountPage.cs",
+              "RelativeDocumentMoniker": "TutorialsNinjaProject\\Pages\\AccountPage.cs",
+              "ToolTip": "C:\\Users\\arunm\\source\\repos\\TutorialsNinjaSolution\\TutorialsNinjaProject\\Pages\\AccountPage.cs",
+              "RelativeToolTip": "TutorialsNinjaProject\\Pages\\AccountPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T10:19:58.192Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginTests.cs",
-              "DocumentMoniker": "C:\\Users\\arunm\\source\\repos\\TutorialsNinjaSolution\\TutorialsNinjaProject\\Tests\\LoginTests.cs",
-              "RelativeDocumentMoniker": "TutorialsNinjaProject\\Tests\\LoginTests.cs",
-              "ToolTip": "C:\\Users\\arunm\\source\\repos\\TutorialsNinjaSolution\\TutorialsNinjaProject\\Tests\\LoginTests.cs",
-              "RelativeToolTip": "TutorialsNinjaProject\\Tests\\LoginTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T09:41:58.623Z",
+              "WhenOpened": "2025-03-29T11:25:57.977Z",
               "EditorCaption": ""
             }
           ]
