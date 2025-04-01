@@ -8,6 +8,8 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using TutorialsNinjaProject.Drivers;
+using TutorialsNinjaProject.Pages;
+using TutorialsNinjaProject.Utilities;
 
 namespace TutorialsNinjaProject.Tests
 {
@@ -18,43 +20,41 @@ namespace TutorialsNinjaProject.Tests
         public void VerifyLoggingOutFromMyAccountDropMenu()
         {
 
-            driver.FindElement(By.XPath("//span[text()='My Account']")).Click();
-            driver.FindElement(By.LinkText("Login")).Click();
-            driver.FindElement(By.Id("input-email")).SendKeys("amotooricap6@gmail.com");
-            driver.FindElement(By.Id("input-password")).SendKeys("12345");
-            driver.FindElement(By.CssSelector("input[value='Login']")).Click();
-            driver.FindElement(By.XPath("//span[text()='My Account']")).Click();
-            driver.FindElement(By.LinkText("Logout")).Click();
-
-            Assert.IsTrue(driver.FindElement(By.XPath("//ul[@class='breadcrumb']//a[text()='Logout']")).Displayed);
-
-            driver.FindElement(By.XPath("//a[@class='btn btn-primary'][text()='Continue']")).Click();
-
+            HomePage homePage = new HomePage(driver);
+            homePage.ClickOnMyAccountOption();
+            homePage.SelectLoginOption();
+            LoginPage loginPage = new LoginPage(driver);
+            loginPage.EnterEmail(config.ValidEmail.ToString());
+            loginPage.EnterPassword(config.ValidPassword.ToString());
+            loginPage.ClickOnLoginButton();
+            AccountPage accountPage = new AccountPage(driver);
+            accountPage.ClickOnMyAccountDropMenu();
+            accountPage.ClickOnMyAccountLogoutOption();
+            LogoutPage logoutPage = new LogoutPage(driver);
+            Assert.IsTrue(logoutPage.DidWeNavigateToLogoutPage());
+            logoutPage.ClickOnContinueButton();
             string expectedTitle = "Your Store";
-
-            Assert.AreEqual(expectedTitle,driver.Title);
+            Assert.AreEqual(expectedTitle,new ElementUtilities(driver).GetPageTitle());
 
         }
 
         [Test]
         public void VerifyLoggingOutFromRightColumnOptions()
         {
-            driver.FindElement(By.XPath("//span[text()='My Account']")).Click();
-            driver.FindElement(By.LinkText("Login")).Click();
-            driver.FindElement(By.Id("input-email")).SendKeys("amotooricap6@gmail.com");
-            driver.FindElement(By.Id("input-password")).SendKeys("12345");
-            driver.FindElement(By.CssSelector("input[value='Login']")).Click();
-            driver.FindElement(By.XPath("//a[@class='list-group-item'][text()='Logout']")).Click();
-
-            Assert.IsTrue(driver.FindElement(By.XPath("//ul[@class='breadcrumb']//a[text()='Logout']")).Displayed);
-
-            driver.FindElement(By.XPath("//a[@class='btn btn-primary'][text()='Continue']")).Click();
-
+            HomePage homePage = new HomePage(driver);
+            homePage.ClickOnMyAccountOption();
+            homePage.SelectLoginOption();
+            LoginPage loginPage = new LoginPage(driver);
+            loginPage.EnterEmail(config.ValidEmail.ToString());
+            loginPage.EnterPassword((config.ValidPassword.ToString()));
+            loginPage.ClickOnLoginButton();
+            AccountPage accountPage = new AccountPage(driver);
+            accountPage.ClickOnMyAccountLogoutOption();
+            LogoutPage logoutPage = new LogoutPage(driver);
+            Assert.IsTrue(logoutPage.DidWeNavigateToLogoutPage());
+            logoutPage.ClickOnContinueButton();
             string expectedTitle = "Your Store";
-
-            Assert.AreEqual(expectedTitle, driver.Title);
-
-            
+            Assert.AreEqual(expectedTitle, new ElementUtilities(driver).GetPageTitle());
 
         }
 

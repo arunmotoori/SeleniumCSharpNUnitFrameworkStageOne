@@ -104,3 +104,4 @@ C:\Users\arunm\source\repos\TutorialsNinjaSolution\TutorialsNinjaProject\obj\Deb
 C:\Users\arunm\source\repos\TutorialsNinjaSolution\TutorialsNinjaProject\obj\Debug\net8.0\TutorialsNinjaProject.genruntimeconfig.cache
 C:\Users\arunm\source\repos\TutorialsNinjaSolution\TutorialsNinjaProject\obj\Debug\net8.0\ref\TutorialsNinjaProject.dll
 C:\Users\arunm\source\repos\TutorialsNinjaSolution\TutorialsNinjaProject\bin\Debug\net8.0\SeleniumExtras.PageObjects.dll
+C:\Users\arunm\source\repos\TutorialsNinjaSolution\TutorialsNinjaProject\bin\Debug\net8.0\Config\config.json

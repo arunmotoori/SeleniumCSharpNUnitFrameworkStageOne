@@ -9,6 +9,7 @@ using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using TutorialsNinjaProject.Drivers;
 using TutorialsNinjaProject.Pages;
+using TutorialsNinjaProject.Utilities;
 
 
 namespace TutorialsNinjaProject.Tests
@@ -17,6 +18,8 @@ namespace TutorialsNinjaProject.Tests
     internal class LoginTest : BaseTest
     {
 
+        
+
         [Test]
         public void VerifyLoginWithValidCredentials()
         {
@@ -24,8 +27,8 @@ namespace TutorialsNinjaProject.Tests
             homePage.ClickOnMyAccountOption();
             homePage.SelectLoginOption();
             LoginPage loginPage = new LoginPage(driver);
-            loginPage.EnterEmail("amotooricap6@gmail.com");
-            loginPage.EnterPassword("12345");
+            loginPage.EnterEmail(config.ValidEmail.ToString());
+            loginPage.EnterPassword(config.ValidPassword.ToString());
             loginPage.ClickOnLoginButton();
             AccountPage accountPage = new AccountPage(driver);
             Assert.IsTrue(accountPage.IsUserLoggedIn());
@@ -40,8 +43,8 @@ namespace TutorialsNinjaProject.Tests
             homePage.ClickOnMyAccountOption();
             homePage.SelectLoginOption();
             LoginPage loginPage = new LoginPage(driver);
-            loginPage.EnterEmail(GenerateEmail());
-            loginPage.EnterPassword("67890");
+            loginPage.EnterEmail(new CommonMethods().GenerateEmail());
+            loginPage.EnterPassword(config.InvalidPassword.ToString());
             loginPage.ClickOnLoginButton();
 
             String expectedWarningMessage = "Warning: No match for E-Mail Address and/or Password.";
@@ -58,8 +61,8 @@ namespace TutorialsNinjaProject.Tests
             homePage.ClickOnMyAccountOption();
             homePage.SelectLoginOption();
             LoginPage loginPage = new LoginPage(driver);
-            loginPage.EnterEmail(GenerateEmail());
-            loginPage.EnterPassword("12345");
+            loginPage.EnterEmail(new CommonMethods().GenerateEmail());
+            loginPage.EnterPassword(config.ValidPassword.ToString());
             loginPage.ClickOnLoginButton();
 
             String expectedWarningMessage = "Warning: No match for E-Mail Address and/or Password.";
@@ -75,8 +78,8 @@ namespace TutorialsNinjaProject.Tests
             homePage.ClickOnMyAccountOption();
             homePage.SelectLoginOption();
             LoginPage loginPage = new LoginPage(driver);
-            loginPage.EnterEmail("amotooricap8@gmail.com");
-            loginPage.EnterPassword("67890");
+            loginPage.EnterEmail(config.ValidEmailTwo.ToString());
+            loginPage.EnterPassword(config.InvalidPassword.ToString());
             loginPage.ClickOnLoginButton();
 
             String expectedWarningMessage = "Warning: No match for E-Mail Address and/or Password.";
@@ -99,16 +102,6 @@ namespace TutorialsNinjaProject.Tests
 
 
         }
-
-
-
-        public string GenerateEmail()
-        {
-            string timestamp = DateTime.UtcNow.ToString("yyyyMMddHHmmssfff"); // Generate a timestamp-based unique identifier
-            string domain = "example.com"; // Change this to your desired domain
-            return $"user{timestamp}@{domain}";
-        }
-
 
 
     }

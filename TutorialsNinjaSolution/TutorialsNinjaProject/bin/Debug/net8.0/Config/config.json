@@ -1,0 +1,16 @@
+{
+
+    "Browser": "chrome",
+    "URL": "https://tutorialsninja.com/demo/",
+    "ValidEmail": "amotooricap6@gmail.com",
+    "ValidPassword": "12345",
+    "InvalidPassword": "67890",
+    "ValidEmailTwo": "amotooricap8@gmail.com",
+    "FirstName": "Arun",
+    "LastName": "Motoori",
+    "TelephoneNumber": "1234567890",
+    "ExistingProduct": "HP",
+    "NonExistingProduct": "Honda"
+
+
+}

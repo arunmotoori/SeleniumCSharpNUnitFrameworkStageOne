@@ -7,6 +7,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
+using TutorialsNinjaProject.Config;
 
 namespace TutorialsNinjaProject.Drivers
 {
@@ -16,7 +17,8 @@ namespace TutorialsNinjaProject.Drivers
 
         public IWebDriver InitialiseDriver()
         {
-            string browser = "edge";
+            var config = ConfigReader.LoadConfigFile();
+            string browser = config.Browser;
 
             if (browser == "chrome")
             {
@@ -32,7 +34,7 @@ namespace TutorialsNinjaProject.Drivers
             }
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
-            driver.Url = "https://tutorialsninja.com/demo/";
+            driver.Url = config.URL;
 
             return driver;
 

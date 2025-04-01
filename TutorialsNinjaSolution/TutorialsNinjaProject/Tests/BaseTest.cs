@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
+using TutorialsNinjaProject.Config;
 using TutorialsNinjaProject.Drivers;
 
 namespace TutorialsNinjaProject.Tests
@@ -14,11 +15,22 @@ namespace TutorialsNinjaProject.Tests
         protected IWebDriver driver;
         private DriverManager driverManager;
 
+        protected dynamic config;
+       
+
+        [OneTimeSetUp]
+        public void GlobalSetup()
+        {
+            config = ConfigReader.LoadConfigFile(); // Load configuration ONCE before all tests
+        }
+
+
         [SetUp]
         public void Setup()
         {
             driverManager = new DriverManager();
             driver = driverManager.InitialiseDriver();
+            config = ConfigReader.LoadConfigFile();
         }
 
         [TearDown]
